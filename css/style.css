@@ -2,13 +2,57 @@ body{
     background-color: rgb(190, 216, 255);
 }
 
+header > h1 {
+    margin-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.item{
+    padding: 30px;
+    display: inline-block;   
+    background-color: rgb(207, 255, 206);
+    box-shadow: 2px;
+
+    pointer-events: none;
+}
+
+#selection_container{
+    display: grid;
+    gap: 20px;
+    grid-auto-flow: column;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 1000px;
+
+    text-align: center;
+    cursor: pointer;
+
+    animation: open3 2s ease-out forwards;
+
+    /* background-color: yellow; */
+}
+
+#pokemon{
+    display: none;
+}
+
+#background_container{
+    position: relative;
+    z-index: -10;
+}
+
 #top_circle{
     background-color: red;
     margin-inline: auto;
     width: 1000px;
     height: 500px;
     border-radius: 500px 500px 0 0;
-    animation: open2 3s ease-out forwards;
+    animation: open2 2s ease-out forwards;
 }
 
 #middle_circle{
@@ -20,7 +64,7 @@ body{
     margin-inline: auto;
     margin-top: -100px;
 
-    animation: open 3s ease-out forwards;
+    animation: open 2s ease-in forwards;
 }
 
 #bottom_circle{
@@ -31,7 +75,7 @@ body{
     height: 500px;
     border-radius: 0 0 500px 500px;
 
-    animation: open 3s ease-out forwards;
+    animation: open 2s ease-in forwards;
 }
 
 @keyframes open{
@@ -39,7 +83,7 @@ body{
         transform: translateY(0)
     }
     to {
-        transform: translateY(200px);
+        transform: translateY(100px);
     }
 }
 
@@ -49,5 +93,13 @@ body{
     }
     to {
         transform: translateY(-200px);
+    }
+}
+
+@keyframes open3{
+    to {
+        width: 1200px;
+        transform: translateY(-50px);
+        font-size: 1.5rem;
     }
 }

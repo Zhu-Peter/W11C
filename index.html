@@ -7,15 +7,36 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header></header>
+    <header>
+        <h1>Choose your pokemon!</h1>
+    </header>
     <main>
+        <section id="background_container">
+            <div id="top_circle"></div>
+            <div id="middle_circle"></div>
+            <div id="bottom_circle"></div>
+        </section>
+        <section id="selection_container">
+            <div id="item_1" class="item"></div>
+            <div id="item_2" class="item"></div>
+            <div id="item_3" class="item"></div>
+        </section>
+        <section id="pokemon">
+            <div class="pokemon">
+                <h1 class="item_title">Charizard</h1>
+                <img style="width: 200px;" src="https://archives.bulbagarden.net/media/upload/thumb/3/38/0006Charizard.png/600px-0006Charizard.png" alt=""><br>
+            </div>
+            <div class="pokemon">
+                <h1 class="item_title">Bulbasaur</h1>
+                <img style="width: 200px;" src="https://archives.bulbagarden.net/media/upload/thumb/f/fb/0001Bulbasaur.png/250px-0001Bulbasaur.png" alt=""><br>
+            </div>
+            <div class="pokemon">
+                <h1 class="item_title">Pikachu</h1>
+                <img style="width: 200px;" src="https://archives.bulbagarden.net/media/upload/thumb/4/4a/0025Pikachu.png/250px-0025Pikachu.png" alt=""><br>
+            </div>
+        </section>
 
     </main>
-    <section id="background_container">
-        <div id="top_circle"></div>
-        <div id="middle_circle"></div>
-        <div id="bottom_circle"></div>
-    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     <script src="js/app.js"></script>

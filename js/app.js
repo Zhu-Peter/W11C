@@ -64,6 +64,7 @@ function chooseSelected(){
         name: selected
     }
     updateCookies(selected_item);
+    toggleBattleBtn()
 }
 
 function toggleSelection() {
@@ -83,6 +84,15 @@ function clearBorders(){
             document.getElementById(`item_${i}`).style.border = "none";
         }
       }
+}
+
+function toggleBattleBtn(){
+    // if(document.getElementById(`battle`).style.opacity === `1`){
+    //     document.getElementById(`battle`).style.opacity = '0';
+    //     return
+    // }
+    document.getElementById(`battle`).style.opacity = '1';
+    document.getElementById(`battle`).style.pointerEvents = 'all';
 }
 
 function toggleChooseBtn() {

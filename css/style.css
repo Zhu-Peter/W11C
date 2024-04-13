@@ -1,105 +1,142 @@
-body{
-    background-color: rgb(190, 216, 255);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(190, 216, 255);
 }
 
 header > h1 {
-    margin-top: 50px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 3rem;
+  margin-top: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
 }
 
-.item{
-    padding: 30px;
-    display: inline-block;   
-    background-color: rgb(207, 255, 206);
-    box-shadow: 2px;
-
-    pointer-events: none;
+.item {
+  padding: 30px;
+  display: inline-block;
+  background-color: rgb(207, 255, 206);
+  box-shadow: 2px;
+  border-radius: 200px;
+  text-align: center;
+  cursor: pointer;
+  animation: open4 2s ease-out forwards;
 }
 
-#selection_container{
-    display: grid;
-    gap: 20px;
-    grid-auto-flow: column;
+.item > h1 {
+  margin-top: 0;
+}
+
+#selection_container {
+  display: grid;
+  gap: 20px;
+  grid-auto-flow: column;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 1000px;
+
+  animation: open3 2s ease-out forwards;
+
+  /* background-color: yellow; */
+}
+
+#pokemon {
+  display: none;
+}
+
+#button_choose{
+    display: inline-block;
     position: absolute;
-    top: 40%;
     left: 0;
     right: 0;
-    margin: 0 auto;
-    width: 1000px;
-
+    margin-inline: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: white;
     text-align: center;
+    padding-top: 70px;
+    font-size: 3rem;
+    font-weight: bold;
+    border: black 5px solid;
     cursor: pointer;
-
-    animation: open3 2s ease-out forwards;
-
-    /* background-color: yellow; */
-}
-
-#pokemon{
     display: none;
 }
 
-#background_container{
-    position: relative;
-    z-index: -10;
+#background_container {
+  position: relative;
+  z-index: -10;
 }
 
-#top_circle{
-    background-color: red;
-    margin-inline: auto;
-    width: 1000px;
-    height: 500px;
-    border-radius: 500px 500px 0 0;
-    animation: open2 2s ease-out forwards;
+#top_circle {
+  background-color: red;
+  margin-inline: auto;
+  width: 1000px;
+  height: 500px;
+  border-radius: 500px 500px 0 0;
+  border: black 5px solid;
+  animation: open2 2s ease-out forwards;
 }
 
-#middle_circle{
-    background-color: white;
-    width: 200px;
-    height: 200px;
-    border-radius: 200px;
-    
-    margin-inline: auto;
-    margin-top: -100px;
+#middle_circle {
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
 
-    animation: open 2s ease-in forwards;
+  margin-inline: auto;
+  margin-top: -600px;
+
+  border: black 5px solid;
+
+  animation: open 2s ease-in forwards;
 }
 
-#bottom_circle{
-    background-color: white;
-    margin-inline: auto;
-    margin-top: -110px;
-    width: 1000px;
-    height: 500px;
-    border-radius: 0 0 500px 500px;
+#bottom_circle {
+  background-color: white;
+  margin-inline: auto;
+  margin-top: -110px;
+  width: 1000px;
+  height: 500px;
+  border-radius: 0 0 500px 500px;
+  border: black 5px solid;
 
-    animation: open 2s ease-in forwards;
+  animation: open 2s ease-in forwards;
 }
 
-@keyframes open{
-    from {
-        transform: translateY(0)
-    }
-    to {
-        transform: translateY(100px);
-    }
+@keyframes open {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(200px);
+  }
 }
 
-@keyframes open2{
-    from {
-        transform: translateY(0)
-    }
-    to {
-        transform: translateY(-200px);
-    }
+@keyframes open2 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-250px);
+  }
 }
 
-@keyframes open3{
-    to {
-        width: 1200px;
-        transform: translateY(-50px);
-        font-size: 1.5rem;
-    }
+@keyframes open3 {
+  to {
+    width: 1200px;
+    transform: translateY(-50px);
+    font-size: 1.5rem;
+    border-radius: 0;
+  }
+}
+
+@keyframes open4 {
+  to {
+    border-radius: 25px;
+  }
 }

@@ -1,23 +1,52 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Battle</title>
 
-    <link rel="stylesheet" href="../css/battle.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/battle.css" />
+    <style>
+      @keyframes playerAttack {
+        100% {
+          transform: translate(300px, -400px);
+        }
+      }
+    </style>
+  </head>
+  <body>
     <header>
-        <a href="../index.html">< Back to Home</a>
+      <a href="../index.html">< Back to Home</a>
     </header>
 
     <main>
-        <section id="battle_container">
-            
-        </section>
+      <section id="battle_container">
+        <div id="enemy_container">
+          <h1 class="item_title">Charizard</h1>
+          <img
+            style="width: 200px"
+            src="https://archives.bulbagarden.net/media/upload/thumb/3/38/0006Charizard.png/600px-0006Charizard.png"
+            alt=""
+          /><br />
+          <div class="stats_container">
+            <p
+              id="enemy_hp"
+              style="color: red; text-align: end; font-size: 3em"
+            >
+              30
+            </p>
+          </div>
+        </div>
+        <div id="pokemon_container"></div>
+      </section>
+      <section id="buttons_container">
+        <div id="atk1" class="attack"></div>
+        <div id="atk2" class="attack"></div>
+        <div id="atk3" class="attack"></div>
+        <div id="atk4" class="attack"></div>
+      </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     <script src="../js/battle.js"></script>
-</body>
+  </body>
 </html>

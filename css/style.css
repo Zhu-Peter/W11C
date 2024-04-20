@@ -65,6 +65,32 @@ header > h1 {
   display: none;
 }
 
+.stats_container{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.stats_atk{
+  font-size: 2em;
+  width: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  margin-left: -10px;
+  background-color: gold;
+  border-radius: 50%;
+}
+
+.stats_hp{
+  justify-self: end;
+  font-size: 2em;
+  width: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  margin-right: -10px;
+  background-color: rgb(255, 0, 43);
+  border-radius: 50%;
+}
+
 #button_choose{
     display: inline-block;
     position: absolute;

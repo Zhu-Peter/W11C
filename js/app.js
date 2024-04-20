@@ -1,6 +1,6 @@
 let items_JSON = Cookies.get(`pokemon`);
 let selected_item = {};
-if (!(items_JSON === undefined)) {
+if (!(items_JSON === `undefined`)) {
   selected_item = JSON.parse(items_JSON);
 }
 
@@ -60,9 +60,9 @@ document.getElementById(`button_choose`).addEventListener('mouseout', function()
 document.getElementById(`button_choose`).addEventListener('click', chooseSelected)
 
 function chooseSelected(){
-    selected_item = {
-        name: selected
-    }
+    // selected_item = {
+    //     name: selected
+    // }
     updateCookies(selected_item);
     toggleBattleBtn()
 }
@@ -74,6 +74,12 @@ function toggleSelection() {
     return;
   }
   selected = this.getElementsByClassName("item_title")[0].innerHTML;
+  selected_item = {
+    name: this.getElementsByClassName("item_title")[0].innerHTML,
+    img: this.querySelectorAll(`img`)[0].attributes.src.value,
+    atk: this.getElementsByClassName("stats_atk")[0].innerHTML,
+    hp: this.getElementsByClassName("stats_hp")[0].innerHTML
+  }
   toggleChooseBtn();
   clearBorders()    
 }

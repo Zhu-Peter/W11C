@@ -1,3 +1,37 @@
 body{
     background-color: rgb(255, 172, 172);
 }
+
+#pokemon_container{
+    margin-left: 200px;
+    width: 200px;
+    background-color: white;
+}
+
+#enemy_container{
+    margin-left: 400px;
+    width: 200px;
+    background-color: white;
+}
+
+#buttons_container{
+    width: 620px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.attack{
+    width: 300px;
+    height: 200px;
+    background-color: gray;
+    border: white solid 2px;
+    cursor: pointer;
+}
+
+@keyframes playerAttack{
+    100%{
+        transform: rotate(-15deg);
+    }
+}
